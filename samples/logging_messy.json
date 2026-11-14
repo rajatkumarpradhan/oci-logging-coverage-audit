@@ -1,0 +1,16 @@
+{
+  "log_groups": [
+    {"ocid": "ocid1.loggroup.oc1..lg1", "display_name": "Default Log Group",
+     "retention_days": 30, "tags": {}},
+    {"ocid": "ocid1.loggroup.oc1..lg2", "display_name": "app-access-logs",
+     "retention_days": 7, "tags": {"owner": "payments-team"}}
+  ],
+  "resources": [
+    {"ocid": "ocid1.vcn.oc1..v1", "type": "vcn", "display_name": "prod-vcn",
+     "logging_enabled": true, "log_group_id": "ocid1.loggroup.oc1..lg1"},
+    {"ocid": "ocid1.loadbalancer.oc1..lb1", "type": "load_balancer", "display_name": "payments-lb",
+     "logging_enabled": true, "log_group_id": "ocid1.loggroup.oc1..lg2"},
+    {"ocid": "ocid1.bucket.oc1..b1", "type": "object_bucket", "display_name": "customer-exports",
+     "logging_enabled": false, "log_group_id": null}
+  ]
+}
